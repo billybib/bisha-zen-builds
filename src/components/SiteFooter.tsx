@@ -1,11 +1,19 @@
 import { Instagram } from "lucide-react";
+import bishaLogoAsset from "@/assets/bisha-logo.png.asset.json";
 
 export function SiteFooter() {
   return (
     <footer className="border-t border-border bg-background">
       <div className="mx-auto grid max-w-[1400px] gap-10 px-6 py-16 text-sm md:grid-cols-3 md:px-12 md:py-20">
         <div>
-          <p className="font-display text-xl">Bisha Contractors Ltd</p>
+          <img
+            src={bishaLogoAsset.url}
+            alt="Bisha Contractors logo"
+            width={64}
+            height={64}
+            className="h-16 w-16 rounded-sm object-cover"
+          />
+          <p className="mt-4 font-display text-xl">Bisha Contractors Ltd</p>
           <p className="mt-2 text-muted-foreground">
             Director: Ledion Bisha · Established 2010
           </p>
