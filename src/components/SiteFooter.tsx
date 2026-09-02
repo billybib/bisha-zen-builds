@@ -1,3 +1,5 @@
+import { Instagram } from "lucide-react";
+
 export function SiteFooter() {
   return (
     <footer className="border-t border-border bg-background">
@@ -23,14 +25,25 @@ export function SiteFooter() {
           >
             bishacontractorsltd@gmail.com
           </a>
-          <a
-            href="https://instagram.com/bishacontractors"
-            target="_blank"
-            rel="noreferrer"
-            className="transition-opacity hover:opacity-60"
-          >
-            @bishacontractors
-          </a>
+          <div className="flex items-center gap-2">
+            <a
+              href="https://www.instagram.com/bishacontractors/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Instagram"
+              className="inline-flex items-center justify-center text-foreground transition-opacity hover:opacity-60"
+            >
+              <Instagram className="h-[18px] w-[18px]" strokeWidth={1.75} />
+            </a>
+            <a
+              href="https://www.instagram.com/bishacontractors/"
+              target="_blank"
+              rel="noreferrer"
+              className="transition-opacity hover:opacity-60"
+            >
+              @bishacontractors
+            </a>
+          </div>
         </div>
       </div>
     </footer>
