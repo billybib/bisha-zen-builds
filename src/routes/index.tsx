@@ -31,10 +31,23 @@ export const Route = createFileRoute("/")({
 });
 
 const projects = [
-  { type: "Rear extension · Full renovation", note: "Project details to follow" },
-  { type: "Loft conversion", note: "Project details to follow" },
-  { type: "Kitchen & bathroom renovations", note: "Project details to follow", image: kitchenBathroomAsset.url },
-  { type: "Whole-house renovation", note: "Project details to follow" },
+  { type: "Rear extension · Full renovation", note: "Project details to follow", images: [] },
+  { type: "Loft conversion", note: "Project details to follow", images: [] },
+  {
+    type: "Kitchen & bathroom renovations",
+    note: "Project details to follow",
+    images: [
+      { url: kitchenBathroomAsset.url, alt: "Bright white kitchen opening into a glazed garden room" },
+      { url: kb125915.url, alt: "Kitchen and glazed garden room, seen from the dining end" },
+      { url: kb125821.url, alt: "Grey shaker kitchen with tiled splashback and integrated cooker" },
+      { url: kb135809.url, alt: "Large black kitchen with central island, mid-installation" },
+      { url: kb125658.url, alt: "Compact bathroom with grey tiling, glass shower and dark vanity" },
+      { url: kb125600.url, alt: "Bathroom with freestanding bath and curved glass shower enclosure" },
+      { url: kb125548.url, alt: "Bathroom with textured grey tiling, bath and shower enclosure" },
+      { url: kb125742.url, alt: "Bathroom with freestanding bath, wood-effect cladding and pebble floor" },
+    ],
+  },
+  { type: "Whole-house renovation", note: "Project details to follow", images: [] },
 ];
 
 const services = [
