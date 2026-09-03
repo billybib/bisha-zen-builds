@@ -135,21 +135,10 @@ function Home() {
           <div className="mt-14 grid gap-12 md:mt-20 md:grid-cols-2 md:gap-x-10 md:gap-y-20">
             {projects.map((p, i) => (
               <article key={p.type} className="group">
-                {p.image ? (
-                  <img
-                    src={p.image}
-                    alt={`${p.type} — completed by Bisha Contractors`}
-                    width={1200}
-                    height={900}
-                    loading="lazy"
-                    className="aspect-4/3 w-full object-cover"
-                  />
-                ) : (
-                  <PhotoPlaceholder
-                    label={`Project photograph ${String(i + 1).padStart(2, "0")} — to be supplied`}
-                    className="aspect-4/3 w-full"
-                  />
-                )}
+                <ProjectCarousel
+                  images={p.images}
+                  placeholderLabel={`Project photographs ${String(i + 1).padStart(2, "0")} — to be supplied`}
+                />
                 <div className="mt-5 flex items-baseline justify-between gap-6">
                   <h3 className="text-xl md:text-2xl">{p.type}</h3>
                   <span className="text-xs text-muted-foreground">{p.note}</span>
