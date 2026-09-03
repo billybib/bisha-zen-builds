@@ -1,5 +1,6 @@
 import { Instagram } from "lucide-react";
 import bishaLogoAsset from "@/assets/bisha-logo.png.asset.json";
+import mybuilderLogoAsset from "@/assets/mybuilder-logo.png.asset.json";
 
 export function SiteFooter() {
   return (
