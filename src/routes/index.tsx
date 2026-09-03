@@ -211,9 +211,9 @@ function Home() {
                     very respectful of the house.
                   </p>
                 </blockquote>
-                <figcaption <strong className="font-semibold text-foreground">Chris</strong> — Ceiling & Plastering>
-                
-                </figcaption>
+                <figcaption className="mt-6 text-sm tracking-wide text-muted-foreground">
+                   Chris — Ceiling & Plastering
+               </figcaption>
               </figure>
 
               <figure className="flex flex-col border-t border-border pt-6">
