@@ -243,6 +243,9 @@ function Home() {
                   We're based in Palmers Green, and most of our work still comes from word of mouth.
                   We'd like to keep it that way.
                 </p>
+                <p className="pt-2 font-display text-2xl italic text-foreground">
+                  — Ledion Bisha, Director
+                </p>
               </div>
             </div>
           </div>
