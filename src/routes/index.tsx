@@ -195,13 +195,15 @@ function Home() {
               <h2 className="text-3xl md:text-5xl">About Bisha</h2>
               <div className="max-w-2xl space-y-5 text-lg leading-relaxed">
                 <p>
-                  Bisha Contractors is a London construction company, run by Ledion Bisha and
-                  working on homes here since 2010. We are based in Palmers Green and most of our
-                  work comes from streets nearby and from clients who pass our name on.
+                  Bisha Contractors has been building and renovating homes across North London since
+                  2010. What started as a small painting and decorating outfit has grown into a
+                  full-service team covering new builds, loft conversions, rendering, roofing and
+                  full refurbishments — without losing the close, hands-on way we work with every
+                  client.
                 </p>
                 <p className="text-muted-foreground">
-                  We take on a small number of projects at a time so each one gets the attention it
-                  needs — a clear plan, a tidy site, and a finish we are happy to put our name to.
+                  We're based in Palmers Green, and most of our work still comes from word of mouth.
+                  We'd like to keep it that way.
                 </p>
               </div>
             </div>
