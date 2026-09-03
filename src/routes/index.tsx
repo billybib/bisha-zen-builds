@@ -98,6 +98,9 @@ function Home() {
                 View our work
               </a>
             </div>
+            <p className="mt-8 text-xs tracking-[0.2em] text-background/60">
+              Family-run in Palmers Green · Building across London since 2010
+            </p>
           </div>
         </section>
 
