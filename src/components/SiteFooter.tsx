@@ -1,5 +1,6 @@
 import { Instagram } from "lucide-react";
 import bishaLogoAsset from "@/assets/bisha-logo.png.asset.json";
+import mybuilderLogoAsset from "@/assets/mybuilder-logo.png.asset.json";
 
 export function SiteFooter() {
   return (
@@ -52,6 +53,22 @@ export function SiteFooter() {
               @bishacontractors
             </a>
           </div>
+          <a
+            href="https://www.mybuilder.com/profile/view/ib_construcion"
+            target="_blank"
+            rel="noreferrer"
+            className="group mt-1 inline-flex w-fit items-center gap-2.5 transition-opacity hover:opacity-60"
+            aria-label="See Bisha Contractors on MyBuilder"
+          >
+            <span className="text-xs tracking-wide text-muted-foreground">
+              Trusted on
+            </span>
+            <img
+              src={mybuilderLogoAsset.url}
+              alt="MyBuilder"
+              className="h-5 w-auto"
+            />
+          </a>
         </div>
       </div>
     </footer>
