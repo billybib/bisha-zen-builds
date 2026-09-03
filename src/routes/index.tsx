@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 
 import heroImage from "@/assets/hero-extension.jpg";
 import craftImage from "@/assets/craft-detail.jpg";
+import kitchenBathroomAsset from "@/assets/kitchen-bathroom.jpg.asset.json";
 import { PhotoPlaceholder } from "@/components/PhotoPlaceholder";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -25,7 +26,7 @@ export const Route = createFileRoute("/")({
 const projects = [
   { type: "Rear extension · Full renovation", note: "Project details to follow" },
   { type: "Loft conversion", note: "Project details to follow" },
-  { type: "Kitchen & bathroom refurbishment", note: "Project details to follow" },
+  { type: "Kitchen & bathroom renovations", note: "Project details to follow", image: kitchenBathroomAsset.url },
   { type: "Whole-house renovation", note: "Project details to follow" },
 ];
 
@@ -114,10 +115,21 @@ function Home() {
           <div className="mt-14 grid gap-12 md:mt-20 md:grid-cols-2 md:gap-x-10 md:gap-y-20">
             {projects.map((p, i) => (
               <article key={p.type} className="group">
-                <PhotoPlaceholder
-                  label={`Project photograph ${String(i + 1).padStart(2, "0")} — to be supplied`}
-                  className="aspect-4/3 w-full"
-                />
+                {p.image ? (
+                  <img
+                    src={p.image}
+                    alt={`${p.type} — completed by Bisha Contractors`}
+                    width={1200}
+                    height={900}
+                    loading="lazy"
+                    className="aspect-4/3 w-full object-cover"
+                  />
+                ) : (
+                  <PhotoPlaceholder
+                    label={`Project photograph ${String(i + 1).padStart(2, "0")} — to be supplied`}
+                    className="aspect-4/3 w-full"
+                  />
+                )}
                 <div className="mt-5 flex items-baseline justify-between gap-6">
                   <h3 className="text-xl md:text-2xl">{p.type}</h3>
                   <span className="text-xs text-muted-foreground">{p.note}</span>
