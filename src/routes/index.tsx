@@ -175,15 +175,50 @@ function Home() {
         <section className="border-t border-border">
           <div className="mx-auto max-w-[1400px] px-6 py-24 md:px-12 md:py-32">
             <p className="eyebrow">In our clients' words</p>
-            <div className="mt-10 grid gap-6 md:grid-cols-2">
-              <PhotoPlaceholder
-                label="Customer testimonial — real quote and client name to be added"
-                className="min-h-52 p-8"
-              />
-              <PhotoPlaceholder
-                label="Customer testimonial — real quote and client name to be added"
-                className="min-h-52 p-8"
-              />
+            <div className="mt-10 grid gap-6 md:mt-16 md:grid-cols-3">
+              <figure className="flex flex-col border-t border-border pt-6">
+                <blockquote className="flex-1 text-lg leading-relaxed">
+                  <p>
+                    Ledion was fantastic, I would highly recommend Bisha Construction. It was
+                    everything you would want from a positive experience with a builder. He took
+                    down a damaged ceiling, reinstalled plaster boards, made repairs and replastered
+                    the room — everything done efficiently and thoroughly, no corners cut. The
+                    initial quote was reasonable and accurate, the team were on time, polite and
+                    very respectful of the house.
+                  </p>
+                </blockquote>
+                <figcaption className="mt-6 text-sm tracking-wide text-muted-foreground">
+                  Chris — Ceiling & Plastering
+                </figcaption>
+              </figure>
+
+              <figure className="flex flex-col border-t border-border pt-6">
+                <blockquote className="flex-1 text-lg leading-relaxed">
+                  <p>
+                    Found Ledion on MyBuilder, and the moment I met him I could instantly tell he
+                    was very experienced. He and the team did a fantastic job removing my two
+                    chimneys, full electrics, painting and some carpentry — I cannot stress how fast
+                    and efficient it was, and to such top quality. You can trust him with the keys.
+                  </p>
+                </blockquote>
+                <figcaption className="mt-6 text-sm tracking-wide text-muted-foreground">
+                  Anmol — Restoration & Refurbishment
+                </figcaption>
+              </figure>
+
+              <figure className="flex flex-col border-t border-border pt-6">
+                <blockquote className="flex-1 text-lg leading-relaxed">
+                  <p>
+                    I would recommend this company. They were punctual and hard working. The repairs
+                    to the render around my windows looks great, and they did a good clean up too. A
+                    really professional job, carried out efficiently, to a high standard, and such
+                    friendly, polite guys.
+                  </p>
+                </blockquote>
+                <figcaption className="mt-6 text-sm tracking-wide text-muted-foreground">
+                  Linda — Render Repairs
+                </figcaption>
+              </figure>
             </div>
           </div>
         </section>
