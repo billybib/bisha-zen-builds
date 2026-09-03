@@ -1,9 +1,20 @@
+import { Instagram } from "lucide-react";
+import bishaLogoAsset from "@/assets/bisha-logo.png.asset.json";
+import mybuilderLogoAsset from "@/assets/mybuilder-logo.png.asset.json";
+
 export function SiteFooter() {
   return (
     <footer className="border-t border-border bg-background">
       <div className="mx-auto grid max-w-[1400px] gap-10 px-6 py-16 text-sm md:grid-cols-3 md:px-12 md:py-20">
         <div>
-          <p className="font-display text-xl">Bisha Contractors Ltd</p>
+          <img
+            src={bishaLogoAsset.url}
+            alt="Bisha Contractors logo"
+            width={64}
+            height={64}
+            className="h-16 w-16 rounded-sm object-cover"
+          />
+          <p className="mt-4 font-display text-xl">Bisha Contractors Ltd</p>
           <p className="mt-2 text-muted-foreground">
             Director: Ledion Bisha · Established 2010
           </p>
@@ -23,13 +34,40 @@ export function SiteFooter() {
           >
             bishacontractorsltd@gmail.com
           </a>
+          <div className="flex items-center gap-2">
+            <a
+              href="https://www.instagram.com/bishacontractors/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Instagram"
+              className="inline-flex items-center justify-center text-foreground transition-opacity hover:opacity-60"
+            >
+              <Instagram className="h-[18px] w-[18px]" strokeWidth={1.75} />
+            </a>
+            <a
+              href="https://www.instagram.com/bishacontractors/"
+              target="_blank"
+              rel="noreferrer"
+              className="transition-opacity hover:opacity-60"
+            >
+              @bishacontractors
+            </a>
+          </div>
           <a
-            href="https://instagram.com/bishacontractors"
+            href="https://www.mybuilder.com/profile/view/ib_construcion"
             target="_blank"
             rel="noreferrer"
-            className="transition-opacity hover:opacity-60"
+            className="group mt-1 inline-flex w-fit items-center gap-2.5 transition-opacity hover:opacity-60"
+            aria-label="See Bisha Contractors on MyBuilder"
           >
-            @bishacontractors
+            <span className="text-xs tracking-wide text-muted-foreground">
+              Trusted on
+            </span>
+            <img
+              src={mybuilderLogoAsset.url}
+              alt="MyBuilder"
+              className="h-5 w-auto"
+            />
           </a>
         </div>
       </div>

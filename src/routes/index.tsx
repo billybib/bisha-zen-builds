@@ -2,7 +2,15 @@ import { createFileRoute } from "@tanstack/react-router";
 
 import heroImage from "@/assets/hero-extension.jpg";
 import craftImage from "@/assets/craft-detail.jpg";
-import { PhotoPlaceholder } from "@/components/PhotoPlaceholder";
+import kitchenBathroomAsset from "@/assets/kitchen-bathroom.jpg.asset.json";
+import kb125548 from "@/assets/kb-125548.jpg.asset.json";
+import kb125600 from "@/assets/kb-125600.jpg.asset.json";
+import kb125658 from "@/assets/kb-125658.jpg.asset.json";
+import kb125742 from "@/assets/kb-125742.jpg.asset.json";
+import kb125821 from "@/assets/kb-125821.jpg.asset.json";
+import kb125915 from "@/assets/kb-125915.jpg.asset.json";
+import kb135809 from "@/assets/kb-135809.jpg.asset.json";
+import { ProjectCarousel } from "@/components/ProjectCarousel";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 
@@ -23,10 +31,23 @@ export const Route = createFileRoute("/")({
 });
 
 const projects = [
-  { type: "Rear extension · Full renovation", note: "Project details to follow" },
-  { type: "Loft conversion", note: "Project details to follow" },
-  { type: "Kitchen & bathroom refurbishment", note: "Project details to follow" },
-  { type: "Whole-house renovation", note: "Project details to follow" },
+  { type: "Rear extension · Full renovation", note: "Project details to follow", images: [] },
+  { type: "Loft conversion", note: "Project details to follow", images: [] },
+  {
+    type: "Kitchen & bathroom renovations",
+    note: "Project details to follow",
+    images: [
+      { url: kitchenBathroomAsset.url, alt: "Bright white kitchen opening into a glazed garden room" },
+      { url: kb125915.url, alt: "Kitchen and glazed garden room, seen from the dining end" },
+      { url: kb125821.url, alt: "Grey shaker kitchen with tiled splashback and integrated cooker" },
+      { url: kb135809.url, alt: "Large black kitchen with central island, mid-installation" },
+      { url: kb125658.url, alt: "Compact bathroom with grey tiling, glass shower and dark vanity" },
+      { url: kb125600.url, alt: "Bathroom with freestanding bath and curved glass shower enclosure" },
+      { url: kb125548.url, alt: "Bathroom with textured grey tiling, bath and shower enclosure" },
+      { url: kb125742.url, alt: "Bathroom with freestanding bath, wood-effect cladding and pebble floor" },
+    ],
+  },
+  { type: "Whole-house renovation", note: "Project details to follow", images: [] },
 ];
 
 const services = [
@@ -78,7 +99,7 @@ function Home() {
           <div className="absolute inset-0 bg-ink/45" />
           <div className="relative mx-auto flex min-h-[92svh] max-w-[1400px] flex-col justify-end px-6 pb-16 pt-40 md:px-12 md:pb-24">
             <h1 className="max-w-3xl text-[2.75rem] leading-[1.03] text-background sm:text-6xl md:text-7xl">
-              Building Better Homes Across London.
+              Building Better Homes Across North London.
             </h1>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-background/80 md:text-lg">
               Extensions, renovations and construction projects, delivered with care from first
@@ -98,6 +119,9 @@ function Home() {
                 View our work
               </a>
             </div>
+            <p className="mt-8 text-xs tracking-[0.2em] text-background/60">
+              Family-run in Palmers Green · Building across London since 2010
+            </p>
           </div>
         </section>
 
@@ -111,9 +135,9 @@ function Home() {
           <div className="mt-14 grid gap-12 md:mt-20 md:grid-cols-2 md:gap-x-10 md:gap-y-20">
             {projects.map((p, i) => (
               <article key={p.type} className="group">
-                <PhotoPlaceholder
-                  label={`Project photograph ${String(i + 1).padStart(2, "0")} — to be supplied`}
-                  className="aspect-4/3 w-full"
+                <ProjectCarousel
+                  images={p.images}
+                  placeholderLabel={`Project photographs ${String(i + 1).padStart(2, "0")} — to be supplied`}
                 />
                 <div className="mt-5 flex items-baseline justify-between gap-6">
                   <h3 className="text-xl md:text-2xl">{p.type}</h3>
@@ -175,15 +199,50 @@ function Home() {
         <section className="border-t border-border">
           <div className="mx-auto max-w-[1400px] px-6 py-24 md:px-12 md:py-32">
             <p className="eyebrow">In our clients' words</p>
-            <div className="mt-10 grid gap-6 md:grid-cols-2">
-              <PhotoPlaceholder
-                label="Customer testimonial — real quote and client name to be added"
-                className="min-h-52 p-8"
-              />
-              <PhotoPlaceholder
-                label="Customer testimonial — real quote and client name to be added"
-                className="min-h-52 p-8"
-              />
+            <div className="mt-10 grid gap-6 md:mt-16 md:grid-cols-3">
+              <figure className="flex flex-col border-t border-border pt-6">
+                <blockquote className="flex-1 text-lg leading-relaxed">
+                  <p>
+                    Ledion was fantastic, I would highly recommend Bisha Construction. It was
+                    everything you would want from a positive experience with a builder. He took
+                    down a damaged ceiling, reinstalled plaster boards, made repairs and replastered
+                    the room — everything done efficiently and thoroughly, no corners cut. The
+                    initial quote was reasonable and accurate, the team were on time, polite and
+                    very respectful of the house.
+                  </p>
+                </blockquote>
+                <figcaption className="mt-6 text-sm tracking-wide text-muted-foreground">
+                   Chris — Ceiling & Plastering
+               </figcaption>
+              </figure>
+
+              <figure className="flex flex-col border-t border-border pt-6">
+                <blockquote className="flex-1 text-lg leading-relaxed">
+                  <p>
+                    Found Ledion on MyBuilder, and the moment I met him I could instantly tell he
+                    was very experienced. He and the team did a fantastic job removing my two
+                    chimneys, full electrics, painting and some carpentry — I cannot stress how fast
+                    and efficient it was, and to such top quality. You can trust him with the keys.
+                  </p>
+                </blockquote>
+                <figcaption className="mt-6 text-sm tracking-wide text-muted-foreground">
+                  Anmol — Restoration & Refurbishment
+                </figcaption>
+              </figure>
+
+              <figure className="flex flex-col border-t border-border pt-6">
+                <blockquote className="flex-1 text-lg leading-relaxed">
+                  <p>
+                    I would recommend this company. They were punctual and hard working. The repairs
+                    to the render around my windows looks great, and they did a good clean up too. A
+                    really professional job, carried out efficiently, to a high standard, and such
+                    friendly, polite guys.
+                  </p>
+                </blockquote>
+                <figcaption className="mt-6 text-sm tracking-wide text-muted-foreground">
+                  Linda — Render Repairs
+                </figcaption>
+              </figure>
             </div>
           </div>
         </section>
@@ -195,13 +254,18 @@ function Home() {
               <h2 className="text-3xl md:text-5xl">About Bisha</h2>
               <div className="max-w-2xl space-y-5 text-lg leading-relaxed">
                 <p>
-                  Bisha Contractors is a London construction company, run by Ledion Bisha and
-                  working on homes here since 2010. We are based in Palmers Green and most of our
-                  work comes from streets nearby and from clients who pass our name on.
+                  Bisha Contractors has been building and renovating homes across North London since
+                  2010. What started as a small painting and decorating outfit has grown into a
+                  full-service team covering new builds, loft conversions, rendering, roofing and
+                  full refurbishments — without losing the close, hands-on way we work with every
+                  client.
                 </p>
                 <p className="text-muted-foreground">
-                  We take on a small number of projects at a time so each one gets the attention it
-                  needs — a clear plan, a tidy site, and a finish we are happy to put our name to.
+                  We're based in Palmers Green, and most of our work still comes from word of mouth.
+                  We'd like to keep it that way.
+                </p>
+                <p className="pt-2 font-display text-2xl italic text-foreground">
+                  L Bisha
                 </p>
               </div>
             </div>
