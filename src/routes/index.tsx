@@ -78,7 +78,7 @@ function Home() {
           <div className="absolute inset-0 bg-ink/45" />
           <div className="relative mx-auto flex min-h-[92svh] max-w-[1400px] flex-col justify-end px-6 pb-16 pt-40 md:px-12 md:pb-24">
             <h1 className="max-w-3xl text-[2.75rem] leading-[1.03] text-background sm:text-6xl md:text-7xl">
-              Building Better Homes Across London.
+              Building Better Homes Across North London.
             </h1>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-background/80 md:text-lg">
               Extensions, renovations and construction projects, delivered with care from first
