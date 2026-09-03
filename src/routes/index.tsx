@@ -3,7 +3,14 @@ import { createFileRoute } from "@tanstack/react-router";
 import heroImage from "@/assets/hero-extension.jpg";
 import craftImage from "@/assets/craft-detail.jpg";
 import kitchenBathroomAsset from "@/assets/kitchen-bathroom.jpg.asset.json";
-import { PhotoPlaceholder } from "@/components/PhotoPlaceholder";
+import kb125548 from "@/assets/kb-125548.jpg.asset.json";
+import kb125600 from "@/assets/kb-125600.jpg.asset.json";
+import kb125658 from "@/assets/kb-125658.jpg.asset.json";
+import kb125742 from "@/assets/kb-125742.jpg.asset.json";
+import kb125821 from "@/assets/kb-125821.jpg.asset.json";
+import kb125915 from "@/assets/kb-125915.jpg.asset.json";
+import kb135809 from "@/assets/kb-135809.jpg.asset.json";
+import { ProjectCarousel } from "@/components/ProjectCarousel";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 
