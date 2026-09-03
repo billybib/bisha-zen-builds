@@ -244,7 +244,7 @@ function Home() {
                   We'd like to keep it that way.
                 </p>
                 <p className="pt-2 font-display text-2xl italic text-foreground">
-                  — Ledion Bisha, Director
+                  L Bisha
                 </p>
               </div>
             </div>
