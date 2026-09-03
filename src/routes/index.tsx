@@ -212,7 +212,7 @@ function Home() {
                   </p>
                 </blockquote>
                 <figcaption <strong className="font-semibold text-foreground">Chris</strong> — Ceiling & Plastering>
-                  Chris — Ceiling & Plastering
+                
                 </figcaption>
               </figure>
 
