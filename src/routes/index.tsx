@@ -37,8 +37,8 @@ const projects = [
     type: "Kitchen & bathroom renovations",
     note: "Project details to follow",
     images: [
-      { url: kitchenBathroomAsset.url, alt: "Bright white kitchen opening into a glazed garden room" },
       { url: kb125915.url, alt: "Kitchen and glazed garden room, seen from the dining end" },
+      { url: kitchenBathroomAsset.url, alt: "Bright white kitchen opening into a glazed garden room" },
       { url: kb125821.url, alt: "Grey shaker kitchen with tiled splashback and integrated cooker" },
       { url: kb135809.url, alt: "Large black kitchen with central island, mid-installation" },
       { url: kb125658.url, alt: "Compact bathroom with grey tiling, glass shower and dark vanity" },
