@@ -8,9 +8,14 @@ export type CarouselImage = { url: string; alt: string };
 export function ProjectCarousel({
   images,
   placeholderLabel,
+  freezeIndex,
 }: {
   images: CarouselImage[];
   placeholderLabel: string;
+  /** When set, render only this image statically (no scroll, no controls).
+   *  Keep the full `images` array intact so the carousel can be restored by
+   *  removing this prop. */
+  freezeIndex?: number;
 }) {
   const trackRef = useRef<HTMLDivElement>(null);
   const [index, setIndex] = useState(0);
@@ -39,6 +44,20 @@ export function ProjectCarousel({
 
   if (images.length === 0) {
     return <PhotoPlaceholder label={placeholderLabel} className="aspect-4/3 w-full" />;
+  }
+
+  // Frozen single-image mode: show one photo, no swipe, no controls.
+  if (freezeIndex !== undefined) {
+    const img = images[freezeIndex] ?? images[0]!;
+    return (
+      <div className="aspect-4/3 w-full overflow-hidden">
+        <img
+          src={img.url}
+          alt={img.alt}
+          className="h-full w-full object-cover"
+        />
+      </div>
+    );
   }
 
   const multiple = images.length > 1;
