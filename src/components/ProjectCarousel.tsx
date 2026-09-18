@@ -8,9 +8,14 @@ export type CarouselImage = { url: string; alt: string };
 export function ProjectCarousel({
   images,
   placeholderLabel,
+  freezeIndex,
 }: {
   images: CarouselImage[];
   placeholderLabel: string;
+  /** When set, render only this image statically (no scroll, no controls).
+   *  Keep the full `images` array intact so the carousel can be restored by
+   *  removing this prop. */
+  freezeIndex?: number;
 }) {
   const trackRef = useRef<HTMLDivElement>(null);
   const [index, setIndex] = useState(0);
