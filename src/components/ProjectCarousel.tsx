@@ -46,6 +46,20 @@ export function ProjectCarousel({
     return <PhotoPlaceholder label={placeholderLabel} className="aspect-4/3 w-full" />;
   }
 
+  // Frozen single-image mode: show one photo, no swipe, no controls.
+  if (freezeIndex !== undefined) {
+    const img = images[freezeIndex] ?? images[0];
+    return (
+      <div className="aspect-4/3 w-full overflow-hidden">
+        <img
+          src={img.url}
+          alt={img.alt}
+          className="h-full w-full object-cover"
+        />
+      </div>
+    );
+  }
+
   const multiple = images.length > 1;
 
   return (
