@@ -138,6 +138,9 @@ function Home() {
                 <ProjectCarousel
                   images={p.images}
                   placeholderLabel={`Project photographs ${String(i + 1).padStart(2, "0")} — to be supplied`}
+                  // Kitchen & bathroom card frozen on photo 7 (the textured-tile
+                  // bathroom) for now — remove freezeIndex to restore the carousel.
+                  freezeIndex={p.type === "Kitchen & bathroom renovations" ? 6 : undefined}
                 />
                 <div className="mt-5 flex items-baseline justify-between gap-6">
                   <h3 className="text-xl md:text-2xl">{p.type}</h3>
