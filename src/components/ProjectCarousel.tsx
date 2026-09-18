@@ -48,7 +48,7 @@ export function ProjectCarousel({
 
   // Frozen single-image mode: show one photo, no swipe, no controls.
   if (freezeIndex !== undefined) {
-    const img: CarouselImage = images[freezeIndex] ?? images[0];
+    const img = images[freezeIndex] ?? images[0];
     return (
       <div className="aspect-4/3 w-full overflow-hidden">
         <img
